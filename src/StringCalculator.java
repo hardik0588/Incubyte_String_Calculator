@@ -27,10 +27,15 @@ public class StringCalculator {
                 num=num-96;
                 sum=sum+num;
             }
+            else if(Integer.parseInt(str)<0)
+            {
+                throw new RuntimeException("Negative not allowed");
+            }
             else 
             {
                 sum=sum+Integer.parseInt(str);
             }
+            
         }
         return sum;
     }

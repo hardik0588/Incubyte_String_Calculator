@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -56,4 +57,20 @@ public class StringCalculatorTest {
         int actualValue=stringCalculator.add(inputValue);
         assertEquals("It should return the sum of all alphabet values and numberic values",expectedValue,actualValue);
     }
+    
+    @Test
+    public void hasNegitiveValue()
+    {
+        String inputValue="-1";
+        try{
+            stringCalculator.add(inputValue);
+            
+        }
+        catch(RuntimeException e)
+        {
+            System.out.println(e.getMessage());
+            fail("Exception");
+        }
+    }
+    
 }
