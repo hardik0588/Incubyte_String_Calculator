@@ -48,4 +48,12 @@ public class StringCalculatorTest {
         int actualValue=stringCalculator.add(inputValue);
         assertEquals("It should return the sum of alphabet values",expectedValue, actualValue);
     }
+    @Test
+    public void hasMultipalAlpaValue()
+    {
+        String inputValue="1,2,13,a,b,c,d";
+        int expectedValue=26;
+        int actualValue=stringCalculator.add(inputValue);
+        assertEquals("It should return the sum of all alphabet values and numberic values",expectedValue,actualValue);
+    }
 }

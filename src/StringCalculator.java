@@ -14,30 +14,25 @@ public class StringCalculator {
             int charcter=numbers.charAt(0);
             return charcter-96;
         }
+        
         StringTokenizer st=new StringTokenizer(numbers,",");
-        if(st.countTokens()==1)
+        int sum=0;
+        while(st.hasMoreTokens())
         {
-            return Integer.parseInt(numbers);
-        }
-        else if(st.countTokens()==2)
-        {
-            int sum=0;
-            while(st.hasMoreTokens())
+            String str=st.nextToken();
+            char ch=str.charAt(0);
+            if(!Character.isDigit(ch))
             {
-                sum =sum +Integer.parseInt(st.nextToken());
+                int num=ch;
+                num=num-96;
+                sum=sum+num;
             }
-            return sum;
-        }
-        else if(st.countTokens()==2 || st.countTokens()>1)
-        {
-            int sum=0;
-            while(st.hasMoreTokens())
+            else 
             {
-                sum =sum +Integer.parseInt(st.nextToken());
+                sum=sum+Integer.parseInt(str);
             }
-            return sum;
         }
-        return -1;
+        return sum;
     }
     
 }
