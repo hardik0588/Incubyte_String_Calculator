@@ -81,6 +81,13 @@ public class StringCalculatorTest {
         int expectedValue=2;
         int actualValue=stringCalculator.add(inputValue);
         assertEquals(expectedValue,actualValue);
- 
+    }
+    @Test
+    public void hasAllowedNewLineValues()
+    {
+        String inputValue="1,1,2\n3";
+        int expectedValue=7;
+        int actualValue=stringCalculator.add(inputValue);
+        assertEquals(expectedValue,actualValue);
     }
 }

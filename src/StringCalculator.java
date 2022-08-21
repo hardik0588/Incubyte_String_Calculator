@@ -8,7 +8,7 @@ public class StringCalculator {
         {
             return 0;
         }    
-        StringTokenizer st=new StringTokenizer(numbers,",");
+        StringTokenizer st=new StringTokenizer(numbers,",\n");
         int sum=0;
         String tmp="";
         while(st.hasMoreTokens())
@@ -27,12 +27,10 @@ public class StringCalculator {
             }
             else 
             {
-        
                 if(!(Integer.parseInt(str)>1000))
                 {
                      sum=sum+Integer.parseInt(str);
-                }
-        
+                } 
             }
         }
         if(tmp.length()>0)
