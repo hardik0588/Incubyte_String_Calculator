@@ -73,4 +73,14 @@ public class StringCalculatorTest {
         add("-1,15,-5"));
         assertEquals("Negative not allowed -1,-5,",e.getMessage());
     }
+    
+    @Test
+    public void hasMoreThanOneThousandValue()
+    {
+        String inputValue="2,1001";
+        int expectedValue=2;
+        int actualValue=stringCalculator.add(inputValue);
+        assertEquals(expectedValue,actualValue);
+ 
+    }
 }
