@@ -7,21 +7,14 @@ public class StringCalculator {
         if(numbers.equals(""))
         {
             return 0;
-        }
-        
-        if(!Character.isDigit(numbers.charAt(0)))
-        {
-            int charcter=numbers.charAt(0);
-            return charcter-96;
-        }
-        
+        }    
         StringTokenizer st=new StringTokenizer(numbers,",");
         int sum=0;
         while(st.hasMoreTokens())
         {
             String str=st.nextToken();
             char ch=str.charAt(0);
-            if(!Character.isDigit(ch))
+            if((!Character.isDigit(ch)) && (str.length()==1))
             {
                 int num=ch;
                 num=num-96;
