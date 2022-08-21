@@ -26,4 +26,11 @@ public class StringCalculatorTest {
         int actualValue = stringCalculator.add(inputValue);
         assertEquals("it should return one if it has one arugment", expectedValue, actualValue);
     }
+    @Test
+    public void hasTwoValues(){
+        String inputValue="1,2";
+        int expectedValue=3;
+        int actualValue=stringCalculator.add(inputValue);
+        assertEquals("It should return two if it has two arugments",expectedValue, actualValue);
+    }
 }

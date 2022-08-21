@@ -12,6 +12,15 @@ public class StringCalculator {
         {
             return Integer.parseInt(numbers);
         }
+        else if(st.countTokens()==2)
+        {
+            int sum=0;
+            while(st.hasMoreTokens())
+            {
+                sum =sum +Integer.parseInt(st.nextToken());
+            }
+            return sum;
+         }
         return -1;
     }  
 }
