@@ -33,4 +33,11 @@ public class StringCalculatorTest {
         int actualValue=stringCalculator.add(inputValue);
         assertEquals("It should return two if it has two arugments",expectedValue, actualValue);
     }
+    @Test
+    public void hasNumberOfValues(){
+        String inputValue="1,2,3,4,5";
+        int expectedValue=15;
+        int actualValue=stringCalculator.add(inputValue);
+        assertEquals("It should return the sum of unknown amount of numbers",expectedValue, actualValue);
+    }
 }

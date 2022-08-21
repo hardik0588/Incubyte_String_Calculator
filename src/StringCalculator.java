@@ -20,7 +20,16 @@ public class StringCalculator {
                 sum =sum +Integer.parseInt(st.nextToken());
             }
             return sum;
-         }
+        }
+        else if(st.countTokens()==2 || st.countTokens()>1)
+        {
+            int sum=0;
+            while(st.hasMoreTokens())
+            {
+                sum =sum +Integer.parseInt(st.nextToken());
+            }
+            return sum;
+        }
         return -1;
     }  
 }
