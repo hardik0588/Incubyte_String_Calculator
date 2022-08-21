@@ -40,4 +40,12 @@ public class StringCalculatorTest {
         int actualValue=stringCalculator.add(inputValue);
         assertEquals("It should return the sum of unknown amount of numbers",expectedValue, actualValue);
     }
+    @Test
+    public void hasAlpaValues()
+    {
+        String inputValue="h";
+        int expectedValue=8;
+        int actualValue=stringCalculator.add(inputValue);
+        assertEquals("It should return the sum of alphabet values",expectedValue, actualValue);
+    }
 }
